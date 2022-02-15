@@ -10,6 +10,7 @@ h1{
     color: antiquewhite;
 }
 
+
 .img-container{
     margin: auto;
     width: 70%;
@@ -22,4 +23,15 @@ h1{
 .options{
     margin-top: 20px;
     font-size: 2em;
+    padding-bottom: 10px;
 }
+
+.card {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 3px 4px #1b1f47;
+  }
+
