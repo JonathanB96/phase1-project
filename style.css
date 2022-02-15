@@ -3,3 +3,19 @@ body{
     background: #1b1f47 ;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     }
+
+h1{
+    text-align: center;
+    font-size: 3.7em;
+    color: antiquewhite;
+}
+
+.img-container{
+    margin: auto;
+    width: 70%;
+    background-color: #fff;
+    padding-bottom: 20px;
+    background: rgba(255,255,255, 0.2);
+    border-radius: 5px;
+}
+
