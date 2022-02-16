@@ -71,5 +71,25 @@ label{
   h2, p, button {
       font-size: 1.2em
   }
+  .grayscale{
+    filter : grayscale(100%)
+  }
+  .sepia{
+    filter: sepia(100%)
+   
+  }
+  .saturate{
+    filter: saturate(50%);
+  }
+  .invert{
+    filter: invert(70%)
+  }
+  .hue-rotate{
+    filter: hue-rotate(180deg);
+  }
+  .blur{
+    filter: blur(8px);
+  }
+   
 
 
