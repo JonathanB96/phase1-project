@@ -18,28 +18,28 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     //Fetching photos from  the pexel API    
     fetch("https://api.pexels.com/v1/curated", {
-      method: 'GET',
-      headers: {Accept: 'application/json',
-      Authorization: apiKey}
-    })
-    .then(res=>res.json())
-    .then(data =>{
+        method: 'GET',
+        headers: {Accept: 'application/json',
+        Authorization: apiKey}
+      })
+     .then(res=>res.json())
+     .then(data =>{
 
-      //Displaying a random element of the array
-      let i = Math.floor(Math.random()*15) 
-      let arr = data.photos 
-      img.src = arr[i].src.original 
-      h2.textContent = 'Title'
-      p.textContent = "0"
-      //Rendering elements on the page
-      card.appendChild(h2)
-      card.appendChild(img); 
-      card.appendChild(p);
-      card.appendChild(btn)
-      div.appendChild(card) 
-          
+        //Displaying a random element of the array
+        let i = Math.floor(Math.random()*15) 
+        let arr = data.photos 
+        img.src = arr[i].src.original 
+        h2.textContent = 'Title'
+        p.textContent = "0"
+        //Rendering elements on the page
+        card.appendChild(h2)
+        card.appendChild(img); 
+        card.appendChild(p);
+        card.appendChild(btn)
+        div.appendChild(card) 
+            
       
-    })
+      })
 
     // Display random photo btn
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     btn.addEventListener('click', ()=>{
       click+= 1
       p.textContent = click
-    })
+      })
 
     // Adding a title to the photo
 
@@ -64,6 +64,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
         titleForm.reset()
         
       })
+
+    // Adding a filter on the photo
+    select.addEventListener('change', ()=>{
+    
+        let filter = select.value
+        img.className = filter
+        
+  
+      })
+  
 
 
 
