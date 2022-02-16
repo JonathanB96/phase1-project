@@ -11,6 +11,14 @@ h1{
     color: antiquewhite;
     font-family: 'Moo Lah Lah', cursive;
 }
+h2{
+    color: antiquewhite;
+  }
+  .img-title{
+    font-family: 'Shizuru', cursive;
+    font-size: 1.3em;
+  
+  }
 h3{
     margin: 1%;
     color: antiquewhite;

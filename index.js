@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     titleForm.addEventListener('submit', (e)=>{
         e.preventDefault()
         let titleInput = document.querySelector('#title').value;
+        h2.className = 'img-title'
         h2.textContent = titleInput;
         titleForm.reset()
         
