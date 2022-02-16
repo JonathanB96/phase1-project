@@ -45,7 +45,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
     btn1.addEventListener('click', ()=>{
         window.location.reload()
       })
-    
+     
+    //Like button
+    let click = 0
+  
+    btn.addEventListener('click', ()=>{
+      click+= 1
+      p.textContent = click
+    })
 
 
 
