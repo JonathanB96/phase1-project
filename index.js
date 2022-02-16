@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       h2.textContent = 'Title'
       p.textContent = "0"
       //Rendering elements on the page
+      card.appendChild(h2)
       card.appendChild(img); 
       card.appendChild(p);
       card.appendChild(btn)
@@ -53,6 +54,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
       click+= 1
       p.textContent = click
     })
+
+    // Adding a title to the photo
+
+    titleForm.addEventListener('submit', (e)=>{
+        e.preventDefault()
+        let titleInput = document.querySelector('#title').value
+        h2.textContent = titleInput
+        titleForm.reset()
+        
+      })
 
 
 
