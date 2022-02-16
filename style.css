@@ -49,6 +49,27 @@ label{
     width: 450px;
     height: 450px;
   }
+  button {
+    position: relative;
+    background-color: #1b1f47;
+    border: none;
+    border-radius: 5px;
+    height: auto;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 12px;
+    justify-self: center;
+    padding: 12px 17px;
+  }
+  button:hover {
+    background-color: whitesmoke;
+    border: #4b5ae0 solid 1px;
+    color: #4b5ae0;
+    cursor: pointer;
+  }
 
+  h2, p, button {
+      font-size: 1.2em
+  }
 
 
