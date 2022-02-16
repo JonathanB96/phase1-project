@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
           
       
     })
+
+    // Display random photo btn
+
+    btn1.addEventListener('click', ()=>{
+        window.location.reload()
+      })
     
 
 
