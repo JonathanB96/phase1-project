@@ -1,1 +1,6 @@
-alert('hello')
+document.addEventListener('DOMContentLoaded', ()=>{
+    
+
+
+
+})
