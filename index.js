@@ -26,17 +26,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
      .then(data =>{
 
         //Displaying a random element of the array
-        let i = Math.floor(Math.random()*15) 
-        let arr = data.photos 
-        img.src = arr[i].src.original 
-        h2.textContent = 'Title'
-        p.textContent = "0"
+        let i = Math.floor(Math.random()*15); 
+        let arr = data.photos; 
+        img.src = arr[i].src.original;
+        h2.textContent = 'Title';
+        p.textContent = "0";
         //Rendering elements on the page
-        card.appendChild(h2)
+        card.appendChild(h2);
         card.appendChild(img); 
         card.appendChild(p);
-        card.appendChild(btn)
-        div.appendChild(card) 
+        card.appendChild(btn);
+        div.appendChild(card);
             
       
       })
@@ -48,19 +48,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
       })
      
     //Like button
-    let click = 0
-  
+    let click = 0;
     btn.addEventListener('click', ()=>{
-      click+= 1
-      p.textContent = click
+      click+= 1;
+      p.textContent = click;
       })
 
     // Adding a title to the photo
 
     titleForm.addEventListener('submit', (e)=>{
         e.preventDefault()
-        let titleInput = document.querySelector('#title').value
-        h2.textContent = titleInput
+        let titleInput = document.querySelector('#title').value;
+        h2.textContent = titleInput;
         titleForm.reset()
         
       })
@@ -68,8 +67,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     // Adding a filter on the photo
     select.addEventListener('change', ()=>{
     
-        let filter = select.value
-        img.className = filter
+        let filter = select.value;
+        img.className = filter;
         
   
       })
