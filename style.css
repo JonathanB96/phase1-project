@@ -79,6 +79,7 @@ label{
   h2, p, button {
       font-size: 1.2em
   }
+  
   .grayscale{
     filter : grayscale(100%)
   }
