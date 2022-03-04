@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       })
      .then(res=>res.json())
      .then(data =>{
+      // console.log(data)
 
         //Displaying a random element of the array
         let i = Math.floor(Math.random()*15); 
@@ -44,7 +45,30 @@ document.addEventListener('DOMContentLoaded', ()=>{
     // Display random photo btn
 
     btn1.addEventListener('click', ()=>{
-        window.location.reload()
+      fetch("https://api.pexels.com/v1/curated", {
+        method: 'GET',
+        headers: {Accept: 'application/json',
+        Authorization: apiKey}
+      })
+     .then(res=>res.json())
+     .then(data =>{
+      // console.log(data)
+
+        //Displaying a random element of the array
+        let i = Math.floor(Math.random()*15); 
+        let arr = data.photos; 
+        img.src = arr[i].src.original;
+        h2.textContent = 'Title';
+        p.textContent = "0";
+        //Rendering elements on the page
+        card.appendChild(h2);
+        card.appendChild(img); 
+        card.appendChild(p);
+        card.appendChild(btn);
+        div.appendChild(card);
+            
+      
+      })
       })
      
     //Like button
