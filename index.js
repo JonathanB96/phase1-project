@@ -38,39 +38,27 @@ document.addEventListener('DOMContentLoaded', ()=>{
         card.appendChild(p);
         card.appendChild(btn);
         div.appendChild(card);
-            
+
+        // Display random photo btn(by making a another req)
+
+        btn1.addEventListener('click', ()=>{
+          fetch("https://api.pexels.com/v1/curated", {
+            method: 'GET',
+            headers: {Accept: 'application/json',
+            Authorization: apiKey}
+          })
+         .then(res=>res.json())
+         .then(data =>{
+          
+            let i = Math.floor(Math.random()*15); 
+            let arr = data.photos; 
+            img.src = arr[i].src.original;
+          
+          })
+          })            
       
       })
-
-    // Display random photo btn
-
-    btn1.addEventListener('click', ()=>{
-      fetch("https://api.pexels.com/v1/curated", {
-        method: 'GET',
-        headers: {Accept: 'application/json',
-        Authorization: apiKey}
-      })
-     .then(res=>res.json())
-     .then(data =>{
-      // console.log(data)
-
-        //Displaying a random element of the array
-        let i = Math.floor(Math.random()*15); 
-        let arr = data.photos; 
-        img.src = arr[i].src.original;
-        h2.textContent = 'Title';
-        p.textContent = "0";
-        //Rendering elements on the page
-        card.appendChild(h2);
-        card.appendChild(img); 
-        card.appendChild(p);
-        card.appendChild(btn);
-        div.appendChild(card);
-            
-      
-      })
-      })
-     
+       
     //Like button
     let click = 0;
     btn.addEventListener('click', ()=>{
@@ -85,23 +73,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
         let titleInput = document.querySelector('#title').value;
         h2.className = 'img-title'
         h2.textContent = titleInput;
-        titleForm.reset()
-        
+        titleForm.reset()        
       })
 
     // Adding a filter on the photo
     select.addEventListener('change', ()=>{
     
         let filter = select.value;
-        img.className = filter;
-        
+        img.className = filter;       
   
       })
-  
-
-
-
-
-
 
 })
